@@ -6,6 +6,7 @@
 package calculadoraswing;
 
 import java.awt.event.KeyEvent;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -422,10 +423,11 @@ public class TelaCalculadora extends javax.swing.JFrame {
     private void multiplicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_multiplicarMouseClicked
         String valor = visorCalculadora.getText();
         visorCalculadora.setText(valor + "*");
+        
     }//GEN-LAST:event_multiplicarMouseClicked
 
     private void num2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num2ActionPerformed
-        
+
     }//GEN-LAST:event_num2ActionPerformed
 
     private void num7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_num7MouseClicked
@@ -494,15 +496,15 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_num0MouseClicked
 
     private void resultadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_resultadoMouseClicked
-       String valor = visorCalculadora.getText();
+        String valor = visorCalculadora.getText();
         Calculos calculos = new Calculos();
         String resultado = calculos.calculadora(valor);
-         
+
         visorCalculadora.setText(resultado);
     }//GEN-LAST:event_resultadoMouseClicked
 
     private void opAdicaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opAdicaoActionPerformed
-        
+
     }//GEN-LAST:event_opAdicaoActionPerformed
 
     private void botaoCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botaoCEActionPerformed
@@ -510,7 +512,7 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botaoCEActionPerformed
 
     private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
-      
+
     }//GEN-LAST:event_resultadoActionPerformed
 
     private void num3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_num3ActionPerformed
@@ -536,81 +538,99 @@ public class TelaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_opRestoMouseClicked
 
     private void resultadoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultadoKeyReleased
-            
+        if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
+            String valor = visorCalculadora.getText();
+            Calculos calculos = new Calculos();
+            String resultado = calculos.calculadora(valor);
+
+            visorCalculadora.setText(resultado);
+        }
     }//GEN-LAST:event_resultadoKeyReleased
 
     private void resultadoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_resultadoKeyPressed
-      
+
     }//GEN-LAST:event_resultadoKeyPressed
 
     private void num7KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num7KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_7){
+        if (evt.getKeyCode() == KeyEvent.VK_7) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "7"); 
+            visorCalculadora.setText(valor + "7");
         }
+       
     }//GEN-LAST:event_num7KeyReleased
 
     private void num9KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num9KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_9){
+        if (evt.getKeyCode() == KeyEvent.VK_9) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "9"); 
+            visorCalculadora.setText(valor + "9");
         }
+        
     }//GEN-LAST:event_num9KeyReleased
 
     private void num8KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num8KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_8){
+        if (evt.getKeyCode() == KeyEvent.VK_8) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "8"); 
+            visorCalculadora.setText(valor + "8");
         }
+       
     }//GEN-LAST:event_num8KeyReleased
 
     private void num4KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num4KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_4){
+        if (evt.getKeyCode() == KeyEvent.VK_4) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "4"); 
+            visorCalculadora.setText(valor + "4");
         }
+        
     }//GEN-LAST:event_num4KeyReleased
 
     private void num5KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num5KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_5){
+        if (evt.getKeyCode() == KeyEvent.VK_5) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "5"); 
+            visorCalculadora.setText(valor + "5");
         }
+        
     }//GEN-LAST:event_num5KeyReleased
 
     private void num6KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num6KeyReleased
-       if(evt.getKeyCode() == KeyEvent.VK_6){
+        if (evt.getKeyCode() == KeyEvent.VK_6) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "6"); 
+            visorCalculadora.setText(valor + "6");
         }
+        
     }//GEN-LAST:event_num6KeyReleased
 
     private void num1KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num1KeyReleased
-        if(evt.getKeyCode() == KeyEvent.VK_1){
+        if (evt.getKeyCode() == KeyEvent.VK_1) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "1"); 
+            visorCalculadora.setText(valor + "1");
         }
+        
     }//GEN-LAST:event_num1KeyReleased
 
     private void num2KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num2KeyReleased
-       if(evt.getKeyCode() == KeyEvent.VK_2){
+        if (evt.getKeyCode() == KeyEvent.VK_2) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "2"); 
+            visorCalculadora.setText(valor + "2");
         }
+        
     }//GEN-LAST:event_num2KeyReleased
 
     private void num3KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num3KeyReleased
-       if(evt.getKeyCode() == KeyEvent.VK_3){
+        if (evt.getKeyCode() == KeyEvent.VK_3) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "3"); 
+            visorCalculadora.setText(valor + "3");
         }
+        
     }//GEN-LAST:event_num3KeyReleased
 
     private void num0KeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_num0KeyReleased
-       if(evt.getKeyCode() == KeyEvent.VK_0){
+        if (evt.getKeyCode() == KeyEvent.VK_0) {
             String valor = visorCalculadora.getText();
-            visorCalculadora.setText(valor + "0"); 
+            visorCalculadora.setText(valor + "0");
         }
+        
+        
+        
     }//GEN-LAST:event_num0KeyReleased
 
     /**
